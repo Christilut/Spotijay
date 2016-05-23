@@ -24,7 +24,7 @@ build/Release
 # see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
 node_modules
 spotify_appkey.key
-test_downloads
+downloads
 config.json
 
 .DS_Store
