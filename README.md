@@ -13,8 +13,6 @@ Requires Node 0.10.x
 
 Clone this repo
 
-`git clone git@github.com:alexperezpaya/Spotijay.git`
-
 ## Mac
 
 `brew install homebrew/binary/libspotify lame sox eyeD3`
