@@ -9,6 +9,8 @@ Useful tool that allows to get tracks from your premium spotify subscription in 
 
 # Installation
 
+Requires Node 0.10.x
+
 Clone this repo
 
 `git clone git@github.com:alexperezpaya/Spotijay.git`
@@ -20,6 +22,10 @@ Clone this repo
 ## Arch Linux
 
 `yaourt -S libspotify python2-eyed3 lame sox`
+
+## Ubuntu / Debian
+
+`sudo apt-get install lame sox eyed3`
 
 ## Others
 
