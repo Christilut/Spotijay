@@ -1,58 +1,48 @@
 Spotijay
 ========
 
-# Spoiler
-I'm not even proud of this. This code its ugly and unmaintainable. This was developed quickly to get songs from spotify to do some remixes, so I wrote this to get some songs in wav/mp3.
-I'm not writing more code because I probably re-write this in Golang. Feel free to do what ever you want with this code
+# Introduction
 
-Useful tool that allows to get tracks from your premium spotify subscription in 320kbps and keep them synced
+Download your tracks directly from Spotify, in 320kbps!
+
+Note that while this program is downloading, you cannot use your account elsewhere, just like regular Spotify. Doing so will cause the downloader to stop.  
+Also its quite slow, since the Spotify network doesn't serve files at max speed, but rather at a speed that is fast enough to stream.  
+Oh and it will probably mess up your account statistics at the end of the year since it probably counts download time as time listened.
 
 # Installation
 
 Requires Node 0.10.x
+Requires Spotify Premium
 
-Clone this repo
+Protip: use NVM for easy node version switching
 
-## Mac
-
-`brew install homebrew/binary/libspotify lame sox eyeD3`
-
-## Arch Linux
-
-`yaourt -S libspotify python2-eyed3 lame sox`
-
-## Ubuntu / Debian
-
-`sudo apt-get install lame sox eyed3`
-
-## Others
-
-Check this: [http://docs.mopidy.com/en/v0.8.1/installation/libspotify/](http://docs.mopidy.com/en/v0.8.1/installation/libspotify/)
-
-## Keys
-
-Copy your [appkey](https://developer.spotify.com/my-account/keys) in the root of the dir.
-
-`cd spotijay`
-
-`npm install`
-
-Run help to get help configuring your setup
-`node app.js help`
+1. Clone this repo
+2. Install [libspotify](https://developer.spotify.com/technologies/libspotify/)
+3. Install following libraries: lame sox eye3D
+  - Ubuntu/Debian: `sudo apt-get install lame sox eyed3`
+  - Arch: `yaourt -S libspotify python2-eyed3 lame sox`
+  - OSX: `brew install homebrew/binary/libspotify lame sox eyeD3`
+  - Windows: haha good one
+4. Run `npm install` inside it
+5. Copy your [appkey](https://developer.spotify.com/my-account/keys) in the root of the dir
 
 
-#Sync your playlists in background and forget about crashes interrupting your download
+Program crashes once in a while due to a library bug so you'll have to restart it when that happens. Use [Forever](https://www.npmjs.com/package/forever) to automatically restart it. You should probably turn it off manually when done though (or configure Forever properly) otherwise it restarts every time you want to listen to Spotify and you'll always get the "someone else is using Spotify" message.
+
+# Examples
+
+### Download a single track
 ```shell
-node app.js config -u ramona123 -p m@ric@rmen -d ~/music_download
-# We have now our config ready
-
-# We now install forever to run this in the background and sync our playlists whenever we add music
-npm install -g forever
-
-forever start app.js playlist spotify:playlistURI
-
-# This will go to the background and we can go to sleep while our music is getting downloaded in 320kpbs
-
+node spotijay -u username -p password --track spotify:track:7ixxyJJJKZdo8bsdWwkaB6
 ```
 
-And done.
+### Sync your playlists in the background and forget about crashes interrupting your download
+```shell
+npm install -g forever
+
+forever start node spotijay -u username -p password -d ~/downloads --playlist spotify:playlist:123abc
+```
+
+# Bugs?
+
+Please make an issue, I might look at it when I have time. Pull requests are very welcome!
