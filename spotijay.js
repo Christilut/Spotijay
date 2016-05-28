@@ -1,12 +1,9 @@
-var async = require('async')
-var fs = require('fs')
-var path = require('path')
 var args = require('commander')
-var Spotify = require(__dirname + '/lib/spotify')
+var Spotijay = require('spotijay-lib')
 
 function errorCallback(err) {
-  if (err) console.log(err)
-  process.exit()
+  if (err) throw err
+  process.exit(0)
 }
 
 args
@@ -46,11 +43,11 @@ if (!args.username || !args.password) {
 }
 
 if (args.playlist) {
-  Spotify(args.username, args.password, function(err, spotify) {
+  Spotijay(args.username, args.password, __dirname, function(err, spotify) {
     spotify.downloadPlaylistByUrl(args.playlist, args.dir, errorCallback)
   })
 } else if (args.track) {
-  Spotify(args.username, args.password, function(err, spotify) {
+  Spotijay(args.username, args.password, __dirname, function(err, spotify) {
     spotify.getTrackByUrl(args.track, args.dir, errorCallback)
   })
 }

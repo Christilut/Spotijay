@@ -40,9 +40,14 @@ node spotijay -u username -p password --track spotify:track:7ixxyJJJKZdo8bsdWwka
 ```shell
 npm install -g forever
 
-forever start node spotijay -u username -p password -d ~/downloads --playlist spotify:playlist:123abc
+forever start node spotijay -u username -p password -d ~/downloads --silent --playlist spotify:playlist:123abc
 ```
 
 # Bugs?
 
 Please make an issue, I might look at it when I have time. Pull requests are very welcome!
+
+
+# Credits
+
+Completely based on [Spotijay](https://github.com/alexperezpaya/Spotijay)

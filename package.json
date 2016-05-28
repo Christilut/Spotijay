@@ -17,30 +17,13 @@
     "url": "https://github.com/alexperezpaya/spotijay/issues"
   },
   "author": {
-    "name": "Alejandro Perezpayá",
-    "email": "alejandro@perezpaya.net",
-    "url": "http://perezpaya.net"
+    "name": "Christiaan Maks"
   },
-  "contributors": [
-    {
-      "name": "Alejandro Perezpayá",
-      "email": "alejandro@perezpaya.net",
-      "url": "http://perezpaya.net"
-    },
-    {
-      "name": "Luis Iván Cuende",
-      "email": "me@luisivan.net",
-      "url": "http://luisivan.net"
-    }
-  ],
   "main": "spotijay.js",
   "engines": {
     "node": ">= 0.10.x"
   },
   "dependencies": {
-    "async": "~0.9.0",
-    "commander": "^2.9.0",
-    "libspotify": "~0.2.2"
-  },
-  "private": true
+    "commander": "^2.9.0"
+  }
 }
