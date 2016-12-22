@@ -18,6 +18,7 @@ Protip: use NVM for easy node version switching
 
 1. Clone this repo
 2. Install [libspotify](https://developer.spotify.com/technologies/libspotify/)
+  Alternative: https://github.com/mopidy/libspotify-deb and install `libspotify12` and `libspotify-dev`
 3. Install following libraries: lame sox eye3D
   - Ubuntu/Debian: `sudo apt-get install lame sox eyed3`
   - Arch: `yaourt -S libspotify python2-eyed3 lame sox`
