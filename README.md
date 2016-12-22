@@ -17,13 +17,12 @@ Requires Spotify Premium
 Protip: use NVM for easy node version switching
 
 1. Clone this repo
-2. Install [libspotify](https://developer.spotify.com/technologies/libspotify/)
-  Alternative: https://github.com/mopidy/libspotify-deb and install `libspotify12` and `libspotify-dev`
+2. Install `libspotify12` and `libspotify-dev` from https://github.com/mopidy/libspotify-deb
 3. Install following libraries: lame sox eye3D
   - Ubuntu/Debian: `sudo apt-get install lame sox eyed3`
-  - Arch: `yaourt -S libspotify python2-eyed3 lame sox`
-  - OSX: `brew install homebrew/binary/libspotify lame sox eyeD3`
-  - Windows: haha good one
+  - ~~Arch: `yaourt -S libspotify python2-eyed3 lame sox`~~
+  - ~~OSX: `brew install homebrew/binary/libspotify lame sox eyeD3`~~
+  - ~~Windows: haha good one~~
 4. Run `npm install` inside it
 5. Copy your [appkey](https://developer.spotify.com/my-account/keys) in the root of the dir
 
